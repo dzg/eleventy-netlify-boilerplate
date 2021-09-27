@@ -27,7 +27,7 @@ collections:
         multiple: true
         collection: categories
         value_field: category
-        search_fields: category
+        search_fields: ['name']
 
   - name: categories
     label: Categories
