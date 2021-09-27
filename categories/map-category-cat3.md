@@ -1,3 +1,3 @@
 ---
-category: cat3
+category: cat2
 ---
