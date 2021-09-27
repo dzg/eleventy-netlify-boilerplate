@@ -26,6 +26,9 @@ collections:
         required: false
         multiple: true
         collection: categories
+        value_field: category
+        search_fields: category
+
   - name: categories
     label: Categories
     folder: categories
