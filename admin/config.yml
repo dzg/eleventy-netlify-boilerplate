@@ -28,12 +28,12 @@ collections:
         collection: categories
   - name: categories
     label: Categories
-    folder: authors
+    folder: categories
     create: true
     fields:
       - widget: string
         name: category
-        label: Name
+        label: Category
         required: true
   # Our pages e.g. About
   - name: "pages"
