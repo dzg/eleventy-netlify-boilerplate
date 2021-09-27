@@ -20,7 +20,21 @@ collections:
       - { label: "Author", name: "author", widget: "string", default: "Anonymous" }
       - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Categories"
+        name: "categories"
+        widget: "relation"
+        required: false
+        multiple: true
+        collection: categories
+  - name: categories
+    label: Categories
+    folder: authors
+    create: true
+    fields:
+      - widget: string
+        name: category
+        label: Name
+        required: true
   # Our pages e.g. About
   - name: "pages"
     label: "Page"
