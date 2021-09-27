@@ -46,7 +46,7 @@ collections:
         name: category2
         widget: relation
         collection: settings
-        file: blog__settings
+        file: blog_settings
         value_field: categories.*.name
         search_fields: [categories.*.name]
         display_fields: [categories.*.name]        
