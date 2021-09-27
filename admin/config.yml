@@ -8,6 +8,20 @@ backend:
 media_folder: "static/img" # Media files will be stored in the repo under images/uploads
 
 collections:
+  - name: settings
+    label: Settings
+    editor:
+      preview: false
+    files: 
+      - name: blog_settings
+        label: Blog settings
+        file: blog_settings.yml
+        fields: 
+          - name: categories
+            widget: list
+            summary: '{{fields.name}}'
+            fields:
+              - {name: name}  
   # Our blog posts
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Post" # Used in the UI
@@ -28,6 +42,14 @@ collections:
         collection: categories
         value_field: category
         search_fields: ['name']
+      - label: Category2
+        name: category2
+        widget: relation
+        collection: settings
+        file: blog__settings
+        value_field: categories.*.name
+        search_fields: [categories.*.name]
+        display_fields: [categories.*.name]        
 
   - name: categories
     label: Categories
